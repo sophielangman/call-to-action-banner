@@ -4,6 +4,10 @@ html {
   line-height: 1.5;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
 }
@@ -23,15 +27,68 @@ p {
   padding-bottom: .8em;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+.img-flex {
+  display: block;
+  width: 100%;
 }
 
-.relative {
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #333;
+  text-decoration: none;
+  border: solid 3px #333;
+  border-radius: 8px;
+  padding: .4em .75em .3em;
+}
+
+.btn-big {
+  font-size: 1.5rem;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  border: solid black;
+}
+
+.content {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  max-width: 45em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 1rem;
+  justify-content: space-between;
+  top: 50%;
+  align-items: flex-start;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  max-height: 500px;
+}
+
+.text {
+  width: 60%;
+}
+
+.mc {
+  width: 30%;
+  margin-right: 3em;
+}
+
+
+
+
+
+.banner {
   position: relative;
 }
 
-.absolute {
+.text {
   position: absolute;
   left: 50%;
   top: 100px;
@@ -62,15 +119,7 @@ p {
   overflow: hidden;
 }
 
-.btn {
-  display: inline-block;
-  color: #fff;
-  background-color: #333;
-  text-decoration: none;
-  border: solid 3px #333;
-  border-radius: 8px;
-  padding: .4em .75em .3em;
-}
+
 
 .btn-big {
   font-size: 1.5rem;
